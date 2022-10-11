@@ -1,0 +1,234 @@
+[
+    {
+        "name": "中土",
+        "children": [
+            {
+                "id": 1,
+                "name": "北境城",
+                "position": [0,0],
+                "master": "",
+                "army": 100000,
+                "armySpeed": 10000,
+                "foods": 3650000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            },
+            {
+                "id": 2,
+                "name": "建林",
+                "position": [-1,-1],
+                "master": "",
+                "army": 60000,
+                "armySpeed": 10000,
+                "foods": 2190000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            },
+            {
+                "id": 3,
+                "name": "丰阳",
+                "position": [1,1],
+                "master": "",
+                "army": 60000,
+                "armySpeed": 10000,
+                "foods": 2190000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            },
+            {
+                "id": 4,
+                "name": "康城",
+                "position": [-1,1],
+                "master": "",
+                "army": 60000,
+                "armySpeed": 10000,
+                "foods": 2190000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            },
+            {
+                "id": 5,
+                "name": "商平",
+                "position": [1,-1],
+                "master": "",
+                "army": 60000,
+                "armySpeed": 10000,
+                "foods": 2190000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            }
+        ]
+    },
+    {
+        "name": "北方",
+        "children": [
+            {
+                "id": 6,
+                "name": "茫城",
+                "position": [0,3],
+                "master": "",
+                "army": 30000,
+                "armySpeed": 10000,
+                "foods": 1095000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            },
+            {
+                "id": 7,
+                "name": "雁山",
+                "position": [0,2],
+                "master": "",
+                "army": 50000,
+                "armySpeed": 10000,
+                "foods": 1825000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            }
+        ]
+    },
+    {
+        "name": "西方",
+        "children": [
+            {
+                "id": 8,
+                "name": "景泉",
+                "position": [-3,0],
+                "master": "",
+                "army": 30000,
+                "armySpeed": 10000,
+                "foods": 1095000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            },
+            {
+                "id": 9,
+                "name": "青峰",
+                "position": [-2,0],
+                "master": "",
+                "army": 50000,
+                "armySpeed": 10000,
+                "foods": 1825000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            }
+        ]
+    },
+    {
+        "name": "南方",
+        "children": [
+            {
+                "id": 10,
+                "name": "夏川",
+                "position": [0,-3],
+                "master": "",
+                "army": 30000,
+                "armySpeed": 10000,
+                "foods": 1095000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            },
+            {
+                "id": 11,
+                "name": "慈恩",
+                "position": [0,-2],
+                "master": "",
+                "army": 50000,
+                "armySpeed": 10000,
+                "foods": 1825000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            }
+        ]
+    },
+    {
+        "name": "东方",
+        "children": [
+            {
+                "id": 12,
+                "name": "庆兴",
+                "position": [3,0],
+                "master": "",
+                "army": 30000,
+                "armySpeed": 10000,
+                "foods": 1095000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            },
+            {
+                "id": 13,
+                "name": "颜水",
+                "position": [2,0],
+                "master": "",
+                "army": 50000,
+                "armySpeed": 10000,
+                "foods": 1825000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            }
+        ]
+    },
+    {
+        "name": "西北",
+        "children": [
+            {
+                "id": 14,
+                "name": "狼族",
+                "position": [-2,2],
+                "master": "",
+                "army": 40000,
+                "armySpeed": 10000,
+                "foods": 1460000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            }
+        ]
+    },
+    {
+        "name": "东北",
+        "children": [
+            {
+                "id": 15,
+                "name": "鹰族",
+                "position": [2,2],
+                "master": "",
+                "army": 40000,
+                "armySpeed": 10000,
+                "foods": 1460000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            }
+        ]
+    },
+    {
+        "name": "西南",
+        "children": [
+            {
+                "id": 16,
+                "name": "蛊族",
+                "position": [-2,-2],
+                "master": "",
+                "army": 40000,
+                "armySpeed": 10000,
+                "foods": 1460000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            }
+        ]
+    },
+    {
+        "name": "东南",
+        "children": [
+            {
+                "id": 17,
+                "name": "蛟族",
+                "position": [2,-2],
+                "master": "",
+                "army": 40000,
+                "armySpeed": 10000,
+                "foods": 1460000,
+                "foodMax": 100000000,
+                "foodSpeed": 200000
+            }
+        ]
+    }
+]

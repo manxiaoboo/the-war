@@ -1,0 +1,139 @@
+<div class="clr-row">
+  <div class="card">
+    <h3 class="card-header">剧本：{{ scripts.name }}</h3>
+    <div class="card-block">
+      <h4 class="card-title" *ngIf="runtimeData?.ending">
+        结局：{{ runtimeData.ending.stageLines }}
+      </h4>
+      <div class="card-text">
+        <span class="label">剧本状态:{{ runtimeData?.status }}</span>
+        <span class="label">流局年份:{{ scripts.time?.prefix }}{{ scripts.time?.finalYear }}年</span>
+        <span class="label">当前年份:{{ scripts.time?.prefix }}{{ runtimeData?.year }}年</span>
+        <span class="label">流逝月数:{{ runtimeData?.month }}月</span>
+        <span class="label">流逝天数:{{ runtimeData?.day }}天</span>
+        <div class="progress-block" [style.marginTop.px]="16">
+          <label>流局进度：</label>
+          <div class="progress">
+            <progress [value]="runtimeData?.year || 0" [max]="scripts.time?.finalYear"></progress>
+          </div>
+        </div>
+        <small>
+          序：{{ scripts.description }}
+        </small>
+      </div>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-sm btn-link" (click)="loadRuntime()">Refresh</button>
+    </div>
+  </div>
+</div>
+<div class="clr-row">
+  <div class="clr-col-3">
+    <div class="card">
+      <h3 class="card-header">势力 <button class="btn btn-link" (click)="openMapDialog()">地图</button></h3>
+      <div class="card-block">
+        <div class="card-text">
+          <clr-accordion>
+            <clr-accordion-panel *ngFor="let org of orgs">
+              <clr-accordion-title>{{ org.name }} (领袖：{{org.master? org.masterInstance.name: '无主'}})
+              </clr-accordion-title>
+              <clr-accordion-content *clrIfExpanded>
+                <span class="label">势力存亡:{{ org.alive? '存活' : '灭亡' }}</span>
+                <span class="label">城市:{{ org.cityCount }}座</span>
+                <span class="label">成员:{{ org.actorsCount }}人</span>
+              </clr-accordion-content>
+            </clr-accordion-panel>
+          </clr-accordion>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-sm btn-link" (click)="loadOrganizations()">Refresh</button>
+        <button class="btn btn-sm btn-link">See More</button>
+      </div>
+    </div>
+    <div class="card">
+      <h3 class="card-header">群英</h3>
+      <div class="card-block">
+        <div class="card-text actors-container">
+          <ul class="list-unstyled">
+            <li *ngFor="let act of acts"><button class="btn btn-link">{{ act.name }} 
+              <small [style.color]="'#607d8b'">_{{ act.id == 'boss'? '国贼' : act.role }}_</small>
+            </button></li>
+        </ul>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-sm btn-link" (click)="loadActors()">Refresh</button>
+        <button class="btn btn-sm btn-link">See More</button>
+      </div>
+    </div>
+  </div>
+  <div class="clr-col-9">
+    <div class="card">
+      <h3 class="card-header">重要事件</h3>
+      <div class="card-block">
+        <div class="card-text">
+          <clr-tabs clrLayout="vertical">
+            <clr-tab>
+              <button clrTabLink id="link1">@ 我的经历</button>
+              <clr-tab-content id="content1" class="event-content" *clrIfActive>
+                <div class="message" *ngFor="let msg of myMessages; let i = index">
+                  <span class="label label-success" *ngIf="i == 0">* 新</span>
+                  <span *ngIf="i != 0">⇡</span> {{ msg }}
+                </div>
+              </clr-tab-content>
+            </clr-tab>
+            <clr-tab>
+              <button clrTabLink>@ 势力消息</button>
+              <clr-tab-content id="content2" class="event-content">
+                <div class="message" *ngFor="let msg of orgMessages; let i = index">
+                  <span class="label label-success" *ngIf="i == 0">* 新</span>
+                  <span *ngIf="i != 0">⇡</span> {{ msg }}
+                </div>
+              </clr-tab-content>
+            </clr-tab>
+            <clr-tab>
+              <button clrTabLink>@ 国家大事</button>
+              <clr-tab-content id="content3" class="event-content">
+                <div class="message" *ngFor="let msg of globalMessages; let i = index">
+                  <span class="label label-success" *ngIf="i == 0">* 新</span>
+                  <span *ngIf="i != 0">⇡</span> {{ msg }}
+                </div>
+              </clr-tab-content>
+            </clr-tab>
+            <clr-tab>
+              <button clrTabLink>@ 江湖传闻</button>
+              <clr-tab-content id="content3" class="event-content">
+                <div class="message" *ngFor="let msg of hearsayMessages; let i = index">
+                  <span class="label label-success" *ngIf="i == 0">* 新</span>
+                  <span *ngIf="i != 0">⇡</span> {{ msg }}
+                </div>
+              </clr-tab-content>
+            </clr-tab>
+          </clr-tabs>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-sm btn-link">Refresh</button>
+        <button class="btn btn-sm btn-link">Clear</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<clr-modal [(clrModalOpen)]="openMap" [clrModalSize]="'lg'">
+  <h3 class="modal-title">大地图</h3>
+  <div class="modal-body">
+    <div class="map-container">
+      <div *ngFor="let city of cities" class="map-city" [style.bottom.px]="city.position[1] * 70 - 12"
+        [style.left.px]="city.position[0] * 100 - 12">
+        [{{ city.name }}]
+        <small [style.color]="city.masterInstance?.color">{{ city.masterInstance?.name }}</small>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="closeMapDialog()">关闭</button>
+  </div>
+</clr-modal>

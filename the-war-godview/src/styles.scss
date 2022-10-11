@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #0F171C;
+    padding: 12px 24px;
+    color: #fff;
+}
+
+.clr-accordion-header-button {
+    color: #d2cfcf !important;
+}
+
+h3:not([cds-text]),
+h4:not([cds-text]) {
+    color: #607d8b !important;
+}
+
+.label,
+a.label {
+    color: #d2cfcf !important;
+}
+
+a {
+    color: #00bcd4 !important;
+    cursor: pointer;
+}
+
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #607d8b;
+}

@@ -1,0 +1,95 @@
+[
+    {
+        "name": "朝廷",
+        "id": "boss_organization",
+        "master": "",
+        "alive": true,
+        "actorsCount": 0,
+        "cityCount": 0,
+        "color": "#2196f3",
+        "priority": [
+            "内政",
+            "战争"
+        ]
+    },
+    {
+        "name": "文君阁",
+        "id": "wjg_organization",
+        "master": "",
+        "alive": true,
+        "actorsCount": 0,
+        "cityCount": 0,
+        "color": "#e91e63",
+        "priority": [
+            "内政",
+            "战争"
+        ]
+    },
+    {
+        "name": "帝王殿",
+        "id": "dwd_organization",
+        "master": "",
+        "alive": true,
+        "actorsCount": 0,
+        "cityCount": 0,
+        "color": "#673ab7",
+        "priority": [
+            "战争",
+            "内政"
+        ]
+    },
+    {
+        "name": "汉王朝",
+        "id": "hwc_organization",
+        "master": "",
+        "alive": true,
+        "actorsCount": 0,
+        "cityCount": 0,
+        "color": "#ff5722",
+        "priority": [
+            "战争",
+            "内政"
+        ]
+    },
+    {
+        "name": "驰骋盟",
+        "id": "ccm_organization",
+        "master": "",
+        "alive": true,
+        "actorsCount": 0,
+        "cityCount": 0,
+        "color": "#8bc34a",
+        "priority": [
+            "内政",
+            "战争"
+        ]
+    },
+    {
+        "name": "黑风寨",
+        "id": "hfz_organization",
+        "master": "",
+        "alive": true,
+        "actorsCount": 0,
+        "cityCount": 0,
+        "color": "#ffeb3b",
+        "position": "",
+        "priority": [
+            "内政",
+            "战争"
+        ]
+    },
+    {
+        "name": "鬼王林",
+        "id": "gwl_organization",
+        "master": "",
+        "alive": true,
+        "actorsCount": 0,
+        "cityCount": 0,
+        "color": "#795548",
+        "position": "",
+        "priority": [
+            "内政",
+            "战争"
+        ]
+    }
+]

@@ -1,0 +1,49 @@
+.list-unstyled a {
+    cursor: pointer;
+}
+
+.modal-title {
+    padding: 0;
+}
+.modal-body {
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .map-container {
+        width: 1px;
+        height: 1px;
+        position: relative;
+        .map-city {
+            position: absolute;
+            display: grid;
+            min-width: 64px;
+            text-align: center;
+        }
+    }
+}
+
+.message {
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+}
+
+.actors-container {
+    height: 260px;
+    overflow-y: auto;
+}
+
+::ng-deep .tab-content {
+    border: 2px solid #3f4a50;
+    width: 100%;
+    border-radius: 4px;
+    padding: 12px;
+    height: 320px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+::ng-deep .tabs-vertical>.nav {
+    margin: 0;
+}
